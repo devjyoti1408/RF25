@@ -13,12 +13,13 @@ public class Script1 {
 	@BeforeMethod
 	public void setUP()
 	{
-		driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 	}
 	
 	@Test
 	public void openBrowser()
 	{
+		driver = new ChromeDriver();
 		driver.get("http://localhost/login.do");
 	}
 	
